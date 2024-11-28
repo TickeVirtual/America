@@ -255,7 +255,6 @@ img#impresoraButton {
     <script>
         // Obtener los parámetros de la URL
         const params = new URLSearchParams(window.location.search);
-
         // Obtener los valores de los parámetros
         var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
         var nombre_cliente = params.has('cliente') ? params.get('cliente') : "==Cliente==";
@@ -274,22 +273,16 @@ img#impresoraButton {
         var porcent_desc = params.has('porcent_desc') ? params.get('porcent_desc') : " ";
         var total_por_pagar = params.has('total_por_pagar') ? params.get('total_por_pagar') : " ";
         var estado = params.has('estado') ? params.get('estado') : "--";
-        
-        
-        
-
-        //Recibe los datos de los servicios (separados por comas)
         var cantidades = params.has('cantidades') ? params.get('cantidades') : "";
         var descripciones = params.has('servicios') ? params.get('servicios') : "";
         var detalle = params.has('detalles') ? params.get('detalles') : "";
         var p_units = params.has('p_unit') ? params.get('p_unit') : "";
         var subtotal = params.has('subtotal') ? params.get('subtotal') : "";
-        
+      
         //Formato de 2 decimales
         //total = parseFloat(total).toLocaleString('es-ES', { minimumFractionDigits: 2 });
         //descuento = parseFloat(descuento).toLocaleString('es-ES', { minimumFractionDigits: 2 });
-        //subtotal_desc = parseFloat(subtotal_desc).toLocaleString('es-ES', { minimumFractionDigits: 2 });
-        
+        //subtotal_desc = parseFloat(subtotal_desc).toLocaleString('es-ES', { minimumFractionDigits: 2 });        
         //crea una lista de cada columna a partir de las comas.
         cantidades = cantidades.split(",");
         descripciones = descripciones.split(",");
@@ -311,23 +304,23 @@ img#impresoraButton {
         });
     </script>
     
-    <div id="header">
-     <div class="button-container">
-    <!-- Contenedor de botones -->
-         <div class="button-box">
-  <!-- Botón de WhatsApp con ícono -->
-  <a href="#" id="impresoraButton">
-  <img class="boton" src="Print.png" class="ImganelLogo" width= "40%" id "foto">
-  </a>
-  
-  <!-- Botón existente de WhatsApp -->
-  
-  <!--<a href="#" id="whatsappButton">
-  <img class="boton" src="wsp.png" class="ImganelLogo" width= "60%" id "foto">
-  </a> -->
-    </div>
-  </div>
-</div>
+          <div id="header">
+           <div class="button-container">
+          <!-- Contenedor de botones -->
+               <div class="button-box">
+        <!-- Botón de WhatsApp con ícono -->
+        <a href="#" id="impresoraButton">
+        <img class="boton" src="Print.png" class="ImganelLogo" width= "40%" id "foto">
+        </a>
+        
+        <!-- Botón existente de WhatsApp -->
+        
+        <!--<a href="#" id="whatsappButton">
+        <img class="boton" src="wsp.png" class="ImganelLogo" width= "60%" id "foto">
+        </a> -->
+          </div>
+        </div>
+      </div>
     
      <div id="thermal-pos">
         
@@ -377,14 +370,13 @@ img#impresoraButton {
       
    
    
-        <table class="table">
-            <tbody id="tablaBody">
+  <table class="table">
+      <tbody id="tablaBody">
                 <tr class="table-header">
-    <th><h2>Cant</h2></th>
-    <th><h2>Descripcion</h2></th>
-
-    <th><h2>Precio</h2></th>
-    <th><h2>Subtotal</h2></th> <!-- Nueva columna para Subtotal -->
+                    <th><h2>Cant</h2></th>
+                    <th><h2>Descripcion</h2></th>
+                    <th><h2>Precio</h2></th>
+                    <th><h2>Subtotal</h2></th> 
                  </tr>
                 <script>
                     /*var result = [
@@ -407,7 +399,6 @@ img#impresoraButton {
         
        <td class="item" style="text-align: left;">${row.cantidad}</td>
         <td class="item" style="text-align: left;">${row.descripcion}</td>
-
         <td class="item" style="text-align: right;">${row.precio_unit}</td> <!-- Alinea a la derecha -->
         <td class="item" style="text-align: right;">${subtotal.toFixed(2)}</td> <!-- Alinea a la derecha -->
     `;
