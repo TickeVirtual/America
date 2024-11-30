@@ -168,8 +168,12 @@
       .estado-deuda {
         font-size: 4.5mm !important;
       }
-      .total_por_pagar {
-        font-size: 3.5mm !important;
+      #total_por_pagar {
+          font-size: 3mm !important; /* Tamaño específico para el total por pagar */
+      }
+      
+      #total_por_pagar ~ h2 {
+          font-size: 3mm !important; /* Aplica a cualquier h2 adyacente en esa fila */
       }
 
       .info {
