@@ -247,6 +247,10 @@ img#whatsappButton {
 img#impresoraButton {
     display: none;
 }
+  .cant-grande {
+    font-size: 4mm !important;
+    font-weight: bold !important;
+}
 
 /* ------------------------------------------------------------------------------------------------- */
 
@@ -404,7 +408,7 @@ img#impresoraButton {
     newRow.innerHTML = `
 
         
-       <td class="item" style="text-align: left;"><strong>${row.cantidad}</strong></td>
+       <td class="item cant-grande" style="text-align: left;">${row.cantidad}</td>
 
         <td class="item" style="text-align: left;">${row.descripcion}</td>
         
@@ -571,3 +575,4 @@ if (currentURL.indexOf('sharelink=1') !== -1) {
 
 </body>
 </html>
+
